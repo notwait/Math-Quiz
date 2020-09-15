@@ -5,9 +5,11 @@ while True:
     rounds = input("How many rounds you want to play? ")
     try:
        rounds = int(rounds)
+       if rounds <= 0:
+            int('NopeUDon\'ti')
        breaker = True
     except:
-       print("This isn't a number!")
+       print("This isn't a number or it is 0 or lower")
        breaker = False
     if breaker:
         break
@@ -15,6 +17,9 @@ difficulty = ""
 while not ((difficulty.lower() == "automatic") or (difficulty.lower() == "easy") or (difficulty.lower() == "normal") or (difficulty.lower() == "hard")):
     difficulty = input("Choose Difficulty [Automatic, Easy, Normal, Hard] ")
 for x in range(rounds):
+    if score < 0:
+        print('Sadly, you losed :( Restart the file so you can play one more time!')
+        break
     if difficulty.lower() == "easy" or difficulty.lower() == "automatic":
         FirstNum = randrange(1, 10)
         SecondNum = randrange(1, 10)
