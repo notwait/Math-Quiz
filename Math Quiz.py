@@ -18,7 +18,7 @@ while not ((difficulty.lower() == "automatic") or (difficulty.lower() == "easy")
     difficulty = input("Choose Difficulty [Automatic, Easy, Normal, Hard] ")
 for x in range(rounds):
     if score < 0:
-        print('Sadly, you losed :( Restart the file so you can play one more time!')
+        print('Sadly, you lost :( Restart the file so you can play one more time!')
         break
     if difficulty.lower() == "easy" or difficulty.lower() == "automatic":
         FirstNum = randrange(1, 10)
